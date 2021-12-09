@@ -5,7 +5,7 @@ module Eth
   class OpenSsl
     extend FFI::Library
 
-    if true#FFI::Platform.windows?
+    if FFI::Platform.windows?
       ffi_lib 'libeay32', 'libssl-1_1-x64'
     else
       ffi_lib [
