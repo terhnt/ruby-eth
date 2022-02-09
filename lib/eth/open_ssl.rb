@@ -6,12 +6,12 @@ module Eth
     extend FFI::Library
 
     if FFI::Platform.windows?
-      ffi_lib 'libeay32', 'ssleay32'
+      ffi_lib 'libeay32', 'libssl-1_1-x64'
     else
       ffi_lib [
         'libssl.so.1.1.0', 'libssl.so.1.1',
         'libssl.so.1.0.0', 'libssl.so.10',
-        'ssl'
+       'ssl'
       ]
     end
 

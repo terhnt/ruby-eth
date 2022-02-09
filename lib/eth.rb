@@ -1,4 +1,4 @@
-require 'digest/keccak'
+require 'keccak256'
 require 'ffi'
 require 'money-tree'
 require 'rlp'

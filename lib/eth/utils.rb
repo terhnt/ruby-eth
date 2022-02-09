@@ -65,11 +65,12 @@ module Eth
     end
 
     def keccak256(x)
-      Digest::Keccak.new(256).digest(x)
+      Digest::Keccak256.new.hexdigest(x)
     end
 
     def keccak512(x)
-      Digest::Keccak.new(512).digest(x)
+      puts "keccak512 is broken in this version"
+      #Digest::Keccak.new(512).digest(x)
     end
 
     def keccak256_rlp(x)
